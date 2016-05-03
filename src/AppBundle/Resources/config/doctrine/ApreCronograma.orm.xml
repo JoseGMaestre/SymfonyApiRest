@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\ApreCronograma" table="apre_cronograma">
+    <indexes>
+      <index name="fk_apre_cronograma_apre_evaluaciones1_idx" columns="cro_idevaluacion"/>
+      <index name="fk_apre_cronograma_apre_matricula1_idx" columns="cro_idmateria"/>
+      <index name="fk_apre_cronograma_eval_apre_subobj1_idx" columns="cro_idsubtema"/>
+      <index name="fk_apre_cronograma_eval_apre_temas_a_evaluar1_idx" columns="cro_idtema_a_evaluar"/>
+    </indexes>
+    <id name="croId" type="integer" column="cro_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="croAno" type="string" column="cro_ano" length="5" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="croLapso" type="string" column="cro_lapso" length="6" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="croSeccion" type="string" column="cro_seccion" length="6" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="croIdmateria" type="integer" column="cro_idmateria" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="croIdtemaAEvaluar" type="integer" column="cro_idtema_a_evaluar" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="croIdsubtema" type="integer" column="cro_idsubtema" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="croIdevaluacion" type="integer" column="cro_idevaluacion" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="croStatus" type="string" column="cro_status" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="croFechaIni" type="date" column="cro_fecha_ini" nullable="true"/>
+    <field name="croFechaFin" type="date" column="cro_fecha_fin" nullable="true"/>
+    <field name="tipo" type="string" column="tipo" length="1" nullable="true">
+      <options>
+        <option name="fixed">1</option>
+      </options>
+    </field>
+    <field name="croTema" type="string" column="cro_tema" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

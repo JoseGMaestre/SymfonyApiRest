@@ -1,0 +1,9 @@
+AppBundle\Entity\Materia:
+  exclusion_policy: ALL
+  properties:
+    id:
+      expose: true
+    cal:
+       expose: true
+    materia:
+        expose: true
