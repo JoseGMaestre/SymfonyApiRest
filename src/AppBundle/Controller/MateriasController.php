@@ -3,10 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Materia;
-//use FOS\RestBundle\Controller\Annotations\View;
-//use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\Annotations\View;
-//use FOS\RestBundle\View\View;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
