@@ -15,6 +15,7 @@ class AppKernel extends Kernel {
 			new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 			new JMS\SerializerBundle\JMSSerializerBundle($this),
 			new FOS\RestBundle\FOSRestBundle(),
+                        new Nelmio\CorsBundle\NelmioCorsBundle(),
 			new AppBundle\AppBundle(),
 
 		];
